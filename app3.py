@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import *
 
 
 def add():
@@ -69,15 +70,15 @@ def delete(text):
 
 window = tk.Tk()
 window.title("TO DO LIST")
-window.geometry("640x400+100+100")
-window.resizable(False, False)
+window.geometry("1000x600+100+100")
+window.resizable(True, True)
 
 # title
 lbl_title = tk.Label(window, text="TO DO LIST", bg='white')
 lbl_title.grid(row=0, column=0)
 
-lbl_display = tk.Label(window, text="", bg="white")
-lbl_display.grid(row=0, column=1)
+# lbl_display = tk.Label(window, text="", bg="white")
+# lbl_display.grid(row=0, column=1)
 
 
 # 날짜
@@ -91,11 +92,29 @@ entry_1_text.grid(row=1, column=1)
 lbl_2 = tk.Label(window, text='날씨')
 entry_2_text = tk.Entry(window, width=10, takefocus=True, bg='white')
 
-btn_sunny = tk.Button(master=window, text="맑음", width='10')
-btn_rain = tk.Button(master=window, text="비", width='10')
-btn_hazy = tk.Button(master=window, text="흐림", width='10')
-btn_snow = tk.Button(master=window, text="눈", width='10')
-btn_wind = tk.Button(master=window, text="바람", width='10')
+# photo_sunny = PhotoImage(file="../final_project/image/sunny.png")
+# photo_rain = PhotoImage(file="../final_project/image/rain.png")
+# photo_hazy = PhotoImage(file="../final_project/image/hazy.png")
+# photo_snow = PhotoImage(file="../final_project/image/snow.png")
+# photo_wind = PhotoImage(file="../final_project/image/wind.png")
+# photo_thun = PhotoImage(file="../final_project/image/thunderbolt.png")
+# photo_typ = PhotoImage(file="../final_project/image/typhoon.png")
+#
+# btn_sunny = tk.Button(master=window, image=photo_sunny, width=20, height=20)
+# btn_rain = tk.Button(master=window, image=photo_rain, width=20, height=20)
+# btn_hazy = tk.Button(master=window, image=photo_hazy, width=20, height=20)
+# btn_snow = tk.Button(master=window, image=photo_snow, width=20, height=20)
+# btn_wind = tk.Button(master=window, image=photo_wind, width=20, height=20)
+# btn_thun = tk.Button(master=window, image=photo_thun, width=20, height=20)
+# btn_typ = tk.Button(master=window, image=photo_typ, width=20, height=20)
+
+btn_sunny = tk.Button(master=window, text="맑음", width=10)
+btn_rain = tk.Button(master=window, text="비", width=10)
+btn_hazy = tk.Button(master=window, text="흐림", width=10)
+btn_snow = tk.Button(master=window, text="눈", width=10)
+btn_wind = tk.Button(master=window, text="바람", width=10)
+btn_thun = tk.Button(master=window, text="번개", width=10)
+btn_typ = tk.Button(master=window, text="태풍", width=10)
 
 lbl_2.grid(row=2, column=0)
 btn_sunny.grid(row=2, column=1, padx=10)
@@ -103,6 +122,8 @@ btn_rain.grid(row=2, column=2, padx=10)
 btn_hazy.grid(row=2, column=3, padx=10)
 btn_snow.grid(row=2, column=4, padx=10)
 btn_wind.grid(row=2, column=5, padx=10)
+btn_thun.grid(row=2, column=6, padx=10)
+btn_typ.grid(row=2, column=7, padx=10)
 
 
 # 시간
@@ -135,6 +156,12 @@ entry_6_text = tk.Entry(window, width=10, takefocus=True, bg='white', justify='l
 
 lbl_6.grid(row=6, column=0)
 entry_6_text.grid(row=6, column=1)
+
+# 저장
+btn_update = tk.Button(window, text='저장', width=10)
+btn_update.grid(row=7, column=0)
+
+
 
 # if __name__=='__main__':
 #     main()
