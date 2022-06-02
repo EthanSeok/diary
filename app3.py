@@ -72,30 +72,69 @@ window.title("TO DO LIST")
 window.geometry("640x400+100+100")
 window.resizable(False, False)
 
+# title
+lbl_title = tk.Label(window, text="TO DO LIST", bg='white')
+lbl_title.grid(row=0, column=0)
+
+lbl_display = tk.Label(window, text="", bg="white")
+lbl_display.grid(row=0, column=1)
+
+
+# 날짜
 lbl_1 = tk.Label(window, text='날짜')
-entry_1_text = tk.Entry(window, width=10)
+entry_1_text = tk.Entry(window, width=10, takefocus=True, bg='white')
+lbl_1.grid(row=1, column=0)
+entry_1_text.grid(row=1, column=1)
 
+
+# 날씨
 lbl_2 = tk.Label(window, text='날씨')
-entry_2_text = tk.Entry(window, width=10)
-btn_sunny = tk.Button(master=window, text="맑음")
-btn_rain = tk.Button(master=window, text="비")
-btn_hazy = tk.Button(master=window, text="흐림")
-btn_snow = tk.Button(master=window, text="눈")
-btn_wind = tk.Button(master=window, text="바람")
+entry_2_text = tk.Entry(window, width=10, takefocus=True, bg='white')
 
+btn_sunny = tk.Button(master=window, text="맑음", width='10')
+btn_rain = tk.Button(master=window, text="비", width='10')
+btn_hazy = tk.Button(master=window, text="흐림", width='10')
+btn_snow = tk.Button(master=window, text="눈", width='10')
+btn_wind = tk.Button(master=window, text="바람", width='10')
+
+lbl_2.grid(row=2, column=0)
+btn_sunny.grid(row=2, column=1, padx=10)
+btn_rain.grid(row=2, column=2, padx=10)
+btn_hazy.grid(row=2, column=3, padx=10)
+btn_snow.grid(row=2, column=4, padx=10)
+btn_wind.grid(row=2, column=5, padx=10)
+
+
+# 시간
 lbl_3 = tk.Label(window, text='시간')
-entry_3_text = tk.Entry(window, width=10)
+entry_3_text = tk.Entry(window, width=10, takefocus=True, bg='white')
 
+lbl_3.grid(row=3, column=0)
+entry_3_text.grid(row=3, column=1)
+
+
+# 장소
 lbl_4 = tk.Label(window, text='장소')
-entry_4_text = tk.Entry(window, width=10)
+entry_4_text = tk.Entry(window, width=10, takefocus=True, bg='white')
 
+lbl_4.grid(row=4, column=0)
+entry_4_text.grid(row=4, column=1)
+
+
+# 인원
 lbl_5 = tk.Label(window, text='인원')
-entry_5_text = tk.Entry(window, width=10)
+entry_5_text = tk.Entry(window, width=10, takefocus=True, bg='white')
 
+lbl_5.grid(row=5, column=0)
+entry_5_text.grid(row=5, column=1)
+
+
+# 할 일
 lbl_6 = tk.Label(window, text='할 일')
-entry_6_text = tk.Entry(window, width=10)
+entry_6_text = tk.Entry(window, width=10, takefocus=True, bg='white', justify='left')
 
-
+lbl_6.grid(row=6, column=0)
+entry_6_text.grid(row=6, column=1)
 
 # if __name__=='__main__':
 #     main()
