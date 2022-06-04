@@ -70,6 +70,7 @@ def delete(text):
 
 window = tk.Tk()
 window.title("TO DO LIST")
+window.configure(bg='white')
 window.geometry("1000x600+100+100")
 window.resizable(True, True)
 
@@ -152,10 +153,10 @@ entry_5_text.grid(row=5, column=1)
 
 # 할 일
 lbl_6 = tk.Label(window, text='할 일')
-entry_6_text = tk.Entry(window, width=10, takefocus=True, bg='white', justify='left')
+entry_6_text = tk.Entry(window, width=50, takefocus=True, bg='white', justify='left')
 
 lbl_6.grid(row=6, column=0)
-entry_6_text.grid(row=6, column=1)
+entry_6_text.grid(row=6, column=1, columnspan=7)
 
 # 저장
 btn_update = tk.Button(window, text='저장', width=10)
