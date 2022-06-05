@@ -142,7 +142,7 @@ takeaway_input.place(x=80, y=410, height=130)
 lbl_diary = tk.Label(window, text="일기", bg="white", width=5)
 lbl_diary.place(x=450, y=0)
 entry_diary = tk.Entry(window)
-entry_diary.place(x=450, y=30, width=300, height=500)
+entry_diary.place(x=450, y=30, width=500, height=500)
 
 
 
