@@ -111,8 +111,38 @@ btn_wind.place(x=270, y=60)
 btn_thun = tk.Button(master=window, text="번개", width=5)
 btn_thun.place(x=320, y=60)
 
-btn_typ = tk.Button(master=window, text="태풍", width=5)
-btn_typ.place(x=370, y=60)
+
+# 만족도
+lbl_satisfaction = tk.Label(window, text="만족도", bg="white", width=5)
+lbl_satisfaction.place(x=30, y=380)
+
+btn_verysati = tk.Button(master=window, text="매우만족", width=7)
+btn_verysati.place(x=80, y=380)
+
+btn_sati = tk.Button(master=window, text="만족", width=7)
+btn_sati.place(x=145, y=380)
+
+btn_neither = tk.Button(master=window, text="보통", width=7)
+btn_neither.place(x=210, y=380)
+
+btn_dissati = tk.Button(master=window, text="나쁨", width=7)
+btn_dissati.place(x=275, y=380)
+
+btn_verydissati = tk.Button(master=window, text="매우나쁨", width=7)
+btn_verydissati.place(x=340, y=380)
+
+#느낀점
+lbl_takeaway = tk.Label(window, text="느낀점", bg="white",width=5)
+lbl_takeaway.place(x=30, y=410)
+
+takeaway_input = tk.Entry(window, width=45)
+takeaway_input.place(x=80, y=410, height=130)
+
+# 일기
+lbl_diary = tk.Label(window, text="일기", bg="white", width=5)
+lbl_diary.place(x=450, y=0)
+entry_diary = tk.Entry(window)
+entry_diary.place(x=450, y=30, width=300, height=500)
 
 
 
