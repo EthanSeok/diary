@@ -120,19 +120,19 @@ def deleteone():
     update()
 
 def day_in():
-    lbl_1["text"] = ""
+    lbl_1_display["text"] = ""
     day = entry_1_text.get()
     if day != "":
         day_list.append(day)
         update()
     else:
-        lbl_1["text"] = "날짜를 빼먹으면 일기를 못쓰지?"
+        lbl_1_display["text"] = "날짜를 빼먹으면 일기를 못쓰지?"
     entry_1_text.delete(0, 'end')
 
     return
 
 def sunny_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     sunny = '맑았다.'
     if sunny_list != "":
         sunny_list.append(sunny)
@@ -140,7 +140,7 @@ def sunny_in():
     return sunny
 
 def rain_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     rain = '비가 왔다.'
     if rain_list != "":
         sunny_list.append(rain)
@@ -148,7 +148,7 @@ def rain_in():
     return rain
 
 def hazy_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     hazy = '날이 흐렸다.'
     if hazy_list != "":
         sunny_list.append(hazy)
@@ -156,7 +156,7 @@ def hazy_in():
     return hazy
 
 def snow_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     snow = '눈이 왔다.'
     if snow_list != "":
         snow_list.append(snow)
@@ -164,7 +164,7 @@ def snow_in():
     return snow
 
 def wind_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     wind = '바람이 많이 불었다.'
     if wind_list != "":
         wind_list.append(wind)
@@ -172,7 +172,7 @@ def wind_in():
     return wind
 
 def thun_in():
-    lbl_2['text'] = ''
+    lbl_2_display['text'] = ''
     thun = '번개가 많이 쳤다.'
     if thun_list != "":
         thun_list.append(thun)
@@ -180,55 +180,55 @@ def thun_in():
     return thun
 
 def time_in():
-    lbl_3["text"] = ""
+    lbl_3_display["text"] = ""
     time = entry_3_text.get()
     if time != "":
         time_list.append(time)
         update()
     else:
-        lbl_3["text"] = "시간 빼먹으면 일기를 못쓰지?"
+        lbl_3_display["text"] = "시간 빼먹으면 일기를 못쓰지?"
     entry_3_text.delete(0, 'end')
 
     return
 
 def place_in():
-    lbl_4["text"] = ""
+    lbl_4_display["text"] = ""
     place = entry_4_text.get()
     if place != "":
         place_list.append(place)
         update()
     else:
-        lbl_4["text"] = "장소를 빼먹으면 일기를 못쓰지?"
+        lbl_4_display["text"] = "장소를 빼먹으면 일기를 못쓰지?"
     entry_4_text.delete(0, 'end')
 
     return
 
 def people_in():
-    lbl_5["text"] = ""
+    lbl_5_display["text"] = ""
     people = entry_5_text.get()
     if people != "":
         people_list.append(people)
         update()
     else:
-        lbl_5["text"] = "인원을 빼먹으면 일기를 못쓰지?"
+        lbl_5_display["text"] = "인원을 빼먹으면 일기를 못쓰지?"
     entry_5_text.delete(0, 'end')
 
     return
 
 def task_in():
-    lbl_6["text"] = ""
+    lbl_6_display["text"] = ""
     task = entry_6_text.get()
     if task != "":
         task_list.append(task)
         update()
     else:
-        lbl_6["text"] = "할 일이 없어? 게으르게 살거야?"
+        lbl_6_display["text"] = "할 일이 없어? 게으르게 살거야?"
     entry_6_text.delete(0, 'end')
 
     return
 
 def verysati_in():
-    lbl_satisfaction['text'] = ''
+    lbl_satisfaction_display['text'] = ''
     verysati = '매우 만족스러웠다..'
     if verysati_list != "":
         verysati_list.append(verysati)
@@ -236,7 +236,7 @@ def verysati_in():
     return verysati
 
 def sati_in():
-    lbl_satisfaction['text'] = ''
+    lbl_satisfaction_display['text'] = ''
     sati = '만족스러웠다..'
     if sati_list != "":
         sati_list.append(sati)
@@ -244,7 +244,7 @@ def sati_in():
     return sati
 
 def neither_in():
-    lbl_satisfaction['text'] = ''
+    lbl_satisfaction_display['text'] = ''
     neither = '그저그랬다.'
     if neither_list != "":
         neither_list.append(neither)
@@ -252,7 +252,7 @@ def neither_in():
     return neither
 
 def dissati_in():
-    lbl_satisfaction['text'] = ''
+    lbl_satisfaction_display['text'] = ''
     dissati = '별로였다.'
     if dissati_list != "":
         dissati_list.append(dissati)
@@ -260,7 +260,7 @@ def dissati_in():
     return dissati
 
 def verydissati_in():
-    lbl_satisfaction['text'] = ''
+    lbl_satisfaction_display['text'] = ''
     verydissati = '매우 별로였다.'
     if verydissati_list != "":
         verydissati_list.append(verydissati)
@@ -335,25 +335,8 @@ lbl_1.place(x=30, y=0)
 entry_1_text.place(x=70, y=0)
 btn_day = Button(window, text='추가', bg="white", width=5, command=day_in)
 btn_day.place(x=240, y=0)
-
-# 날씨
-lbl_2 = Label(window, text="날씨", bg="white")
-lbl_2.place(x=30, y=60)
-entry_2_text = Entry(window, width=10, takefocus=True, bg='white')
-
-btn_sunny = Button(master=window, text="맑음", width=10, command=sunny_in)
-btn_rain = Button(master=window, text="비", width=10, command=rain_in)
-btn_hazy = Button(master=window, text="흐림", width=10, command=hazy_in)
-btn_snow = Button(master=window, text="눈", width=10, command=snow_in)
-btn_wind = Button(master=window, text="바람", width=10, command=wind_in)
-btn_thun = Button(master=window, text="번개", width=10, command=thun_in)
-
-btn_sunny.place(x=70, y=60)
-btn_rain.place(x=120, y=60)
-btn_hazy.place(x=170, y=60)
-btn_snow.place(x=220, y=60)
-btn_wind.place(x=270, y=60)
-btn_thun.place(x=320, y=60)
+lbl_1_display = Label(window, text="", bg="white")
+lbl_1_display.place(x=290, y=0)
 
 # 시간
 lbl_3 = Label(window, text='시간', bg="white")
@@ -362,6 +345,45 @@ lbl_3.place(x=30, y=30)
 entry_3_text.place(x=70, y=30)
 btn_time = Button(window, text='추가', bg="white", width=5, command=time_in)
 btn_time.place(x=240, y=30)
+lbl_3_display = Label(window, text="", bg="white")
+lbl_3_display.place(x=290, y=30)
+
+# 날씨
+lbl_2 = Label(window, text="날씨", bg="white")
+lbl_2.place(x=30, y=60)
+entry_2_text = Entry(window, width=10, takefocus=True, bg='white')
+
+photo_sunny = PhotoImage(file="../final_project/image/sunny.png")
+photo_rain = PhotoImage(file="../final_project/image/rain.png")
+photo_hazy = PhotoImage(file="../final_project/image/hazy.png")
+photo_snow = PhotoImage(file="../final_project/image/snow.png")
+photo_wind = PhotoImage(file="../final_project/image/wind.png")
+photo_thun = PhotoImage(file="../final_project/image/thunderbolt.png")
+
+btn_sunny = Button(master=window, image=photo_sunny, width=20, height=20, command=sunny_in)
+btn_rain = Button(master=window, image=photo_rain, width=20, height=20, command=rain_in)
+btn_hazy = Button(master=window, image=photo_hazy, width=20, height=20, command=hazy_in)
+btn_snow = Button(master=window, image=photo_snow, width=20, height=20, command=snow_in)
+btn_wind = Button(master=window, image=photo_wind, width=20, height=20, command=wind_in)
+btn_thun = Button(master=window, image=photo_thun, width=20, height=20, command=thun_in)
+
+# btn_sunny = Button(master=window, text="맑음", width=10, command=sunny_in)
+# btn_rain = Button(master=window, text="비", width=10, command=rain_in)
+# btn_hazy = Button(master=window, text="흐림", width=10, command=hazy_in)
+# btn_snow = Button(master=window, text="눈", width=10, command=snow_in)
+# btn_wind = Button(master=window, text="바람", width=10, command=wind_in)
+# btn_thun = Button(master=window, text="번개", width=10, command=thun_in)
+
+btn_sunny.place(x=70, y=60)
+btn_rain.place(x=120, y=60)
+btn_hazy.place(x=170, y=60)
+btn_snow.place(x=220, y=60)
+btn_wind.place(x=270, y=60)
+btn_thun.place(x=320, y=60)
+
+lbl_2_display = Label(window, text="", bg="white")
+lbl_2_display.place(x=350, y=60)
+
 
 # 장소
 lbl_4 = Label(window, text="장소", bg="white")
@@ -370,6 +392,8 @@ lbl_4.place(x=30, y=90)
 entry_4_text.place(x=70, y=90)
 btn_place = Button(window, text='추가', bg="white", width=5, command=place_in)
 btn_place.place(x=240, y=90)
+lbl_4_display = Label(window, text="", bg="white")
+lbl_4_display.place(x=290, y=90)
 
 # 인원
 lbl_5 = Label(window, text="인원", bg="white")
@@ -378,6 +402,8 @@ lbl_5.place(x=30, y=120)
 entry_5_text.place(x=70, y=120)
 btn_people = Button(window, text='추가', bg="white", width=5, command=people_in)
 btn_people.place(x=240, y=120)
+lbl_5_display = Label(window, text="", bg="white")
+lbl_5_display.place(x=290, y=120)
 
 # 할 일
 lbl_6 = Label(window, text="할 일", bg="white")
@@ -386,6 +412,8 @@ lbl_6.place(x=30, y=150)
 entry_6_text.place(x=70, y=150)
 btn_task = Button(window, text='추가', bg="white", width=5, command=task_in)
 btn_task.place(x=240, y=150)
+lbl_6_display = Label(window, text="", bg="white")
+lbl_6_display.place(x=290, y=150)
 
 # 저장
 btn_update = Button(window, text="완료", width=5, command=add)
@@ -425,6 +453,9 @@ btn_dissati.place(x=275, y=380)
 btn_verydissati = Button(master=window, text="매우나쁨", width=7, command=verydissati_in)
 btn_verydissati.place(x=340, y=380)
 
+lbl_satisfaction_display = Label(window, text="", bg="white")
+lbl_3_display.place(x=350, y=380)
+
 #느낀점
 lbl_takeaway = Label(window, text="느낀점", bg="white",width=5)
 lbl_takeaway.place(x=30, y=410)
@@ -434,9 +465,9 @@ takeaway_input.place(x=80, y=410, height=130)
 
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
-lbl_diary.place(x=450, y=0)
+lbl_diary.place(x=500, y=0)
 lbl_diary_2 = Entry(window, bg="white", relief="solid")
-lbl_diary_2.place(x=450, y=30, width=500, height=500)
+lbl_diary_2.place(x=500, y=30, width=480, height=500)
 
 # if __name__=='__main__':
 #     main()
