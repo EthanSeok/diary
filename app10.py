@@ -1,4 +1,5 @@
 from tkinter import *
+import pickle
 
 def clearlistbox():
     listb.delete(0, "end")
@@ -320,8 +321,8 @@ def add():
         lbl_diary_2.insert(0, diary_text)
         update()
 
-    f = open('diary_text.txt', 'w')
-    f.write(diary_text)
+    with open("diary.pickle", "wb") as fw:
+        pickle.dump(diary_text,fw)
 
     return diary_text
 
