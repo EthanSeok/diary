@@ -454,7 +454,7 @@ btn_verydissati = Button(master=window, text="매우나쁨", width=7, command=ve
 btn_verydissati.place(x=340, y=380)
 
 lbl_satisfaction_display = Label(window, text="", bg="white")
-lbl_3_display.place(x=350, y=380)
+lbl_satisfaction_display.place(x=400, y=380)
 
 #느낀점
 lbl_takeaway = Label(window, text="느낀점", bg="white",width=5)
