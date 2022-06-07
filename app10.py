@@ -1,5 +1,4 @@
 from tkinter import *
-import pickle
 
 def clearlistbox():
     listb.delete(0, "end")
@@ -314,15 +313,15 @@ def add():
                  "{}랑 {}에서 만나서 {}을 했다.\n" \
                  "오늘 하루는 {}\n" \
                  "느낀점\n" \
-                 "{} ".format(day,weather,time,place,people, people, task, sati, felt)
+                 "{} ".format(day,weather,time,people,people,place,task,sati,felt)
 
     lbl_diary_2['text'] = ''
     if diary_text != "":
-        lbl_diary_2.insert(0, diary_text)
+        lbl_diary_2['text'] = diary_text
         update()
 
-    with open("diary.pickle", "wb") as fw:
-        pickle.dump(diary_text,fw)
+    f = open('diary_text.txt', 'w')
+    f.write(diary_text)
 
     return diary_text
 
@@ -502,7 +501,7 @@ btn_add.place(x=353, y=410)
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
 lbl_diary.place(x=500, y=0)
-lbl_diary_2 = Entry(window, bg="white", relief="solid")
+lbl_diary_2 = Label(window, bg="white", relief="solid", wraplength=300)
 lbl_diary_2.place(x=500, y=30, width=480, height=500)
 
 # if __name__=='__main__':
