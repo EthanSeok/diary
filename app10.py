@@ -1,4 +1,5 @@
 from tkinter import *
+import pickle
 
 def clearlistbox():
     listb.delete(0, "end")
@@ -307,33 +308,23 @@ def add():
 
     weather =  sunny + rain + hazy + snow + wind + thun
     sati = verysati + sati + neither + dissati + verydissati
-    diary_text = "오늘의 일기\n " \
-                 "{}오늘은 날씨가 {}\n " \
+    diary_text = "오늘의 일기 {}\n " \
+                 "오늘은 날씨가 {}\n " \
                  "그래서 {}에 {}랑 만났다.\n " \
                  "{}랑 {}에서 만나서 {}을 했다.\n" \
                  "오늘 하루는 {}\n" \
                  "느낀점\n" \
-                 "{} ".format(day,weather,time,people,people,place,task,sati,felt)
+                 "{} ".format(day,weather,time,people, people, place, task, sati, felt)
 
     lbl_diary_2['text'] = ''
     if diary_text != "":
         lbl_diary_2['text'] = diary_text
         update()
 
-    f = open('diary_text.txt', 'w')
-    f.write(diary_text)
+    with open("diary.pickle", "wb") as f:
+        pickle.dump(diary_text,f)
 
     return diary_text
-
-def modify(text):
-    print(text)
-    modify_diary = add()
-
-    return modify_diary
-
-def main():
-    pass
-
 
 window = Tk()
 window.title("TO DO LIST")
@@ -399,13 +390,6 @@ btn_snow = Button(master=window, image=photo_snow, width=20, height=20, command=
 btn_wind = Button(master=window, image=photo_wind, width=20, height=20, command=wind_in)
 btn_thun = Button(master=window, image=photo_thun, width=20, height=20, command=thun_in)
 
-# btn_sunny = Button(master=window, text="맑음", width=10, command=sunny_in)
-# btn_rain = Button(master=window, text="비", width=10, command=rain_in)
-# btn_hazy = Button(master=window, text="흐림", width=10, command=hazy_in)
-# btn_snow = Button(master=window, text="눈", width=10, command=snow_in)
-# btn_wind = Button(master=window, text="바람", width=10, command=wind_in)
-# btn_thun = Button(master=window, text="번개", width=10, command=thun_in)
-
 btn_sunny.place(x=70, y=60)
 btn_rain.place(x=120, y=60)
 btn_hazy.place(x=170, y=60)
@@ -449,19 +433,13 @@ lbl_6_display.place(x=290, y=150)
 
 # 저장
 btn_update = Button(window, text="완료", width=5, command=add)
-btn_update.place(x=305, y=200)
+btn_update.place(x=305, y=200, height=50)
 
 btn_del = Button(window, text="삭제", width=5, command= deleteone)
-btn_del.place(x=305, y=230)
-
-btn_load = Button(window, text="load", width=5,)
-btn_load.place(x=305, y=260)
-
-btn_save = Button(window, text="수정", width=5, command=modify)
-btn_save.place(x=305, y=290)
+btn_del.place(x=305, y=265, height=35)
 
 btn_diary = Button(window, text="clear", width=5, command=clearlistbox)
-btn_diary.place(x=305, y=320)
+btn_diary.place(x=305, y=315, height=35)
 
 listb = Listbox()
 listb.place(x=0, y=200, width=300, height=150)
@@ -501,10 +479,7 @@ btn_add.place(x=353, y=410)
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
 lbl_diary.place(x=500, y=0)
-lbl_diary_2 = Label(window, bg="white", relief="solid", wraplength=300)
+lbl_diary_2 = Label(window, bg="white", relief="solid")
 lbl_diary_2.place(x=500, y=30, width=480, height=500)
-
-# if __name__=='__main__':
-#     main()
 
 window.mainloop()
