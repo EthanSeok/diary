@@ -463,6 +463,9 @@ lbl_takeaway.place(x=30, y=410)
 takeaway_input = Entry(window, width=45)
 takeaway_input.place(x=80, y=410, height=130)
 
+btn_add = Button(window, text="추가", bg="white", width=5)
+btn_add.place(x=353, y=410)
+
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
 lbl_diary.place(x=500, y=0)
