@@ -53,6 +53,9 @@ def update():
     for verydissati in verydissati_list:
         listb.insert("end", verydissati)
 
+    for felt in felt_list:
+        listb.insert("end", felt)
+
 def deleteone():
     delt = listb.get("active")
     if delt in day_list:
@@ -118,6 +121,11 @@ def deleteone():
     if delt in verydissati_list:
         verysati_list.remove(delt)
     update()
+
+    if delt in felt_list:
+        felt_list.remove(delt)
+    update()
+
 
 def day_in():
     lbl_1_display["text"] = ""
@@ -267,6 +275,16 @@ def verydissati_in():
         update()
     return verydissati
 
+def felt_in():
+    lbl_felt["text"] = ""
+    felt = felt_input.get()
+    if felt != "":
+        felt_list.append(felt)
+        update()
+    else:
+        lbl_felt["text"] = "할 일이 없어? 게으르게 살거야?"
+    felt_input.delete(0, 'end')
+
 def add():
     day = ''.join(day_list) + '' + "\n"
     sunny = ''.join(sunny_list) + "\n"
@@ -279,20 +297,33 @@ def add():
     place = ''.join(place_list) + "\n"
     people = ''.join(people_list) + "\n"
     task = ''.join(task_list) + "\n"
+    verysati = ''.join(verysati_list) + "\n"
+    sati = ''.join(sati_list) + "\n"
+    neither = ''.join(neither_list) + "\n"
+    dissati = ''.join(dissati_list) + "\n"
+    verydissati = ''.join(verydissati_list) + "\n"
+    felt = ''.join(felt_list) + "\n"
 
-    text = day + sunny + rain + hazy + snow + wind + thun + time + place + people + task
-    diary_text = "일기 {}".format(day)
-    text = text + diary_text
+
+    weather =  sunny + rain + hazy + snow + wind + thun
+    sati = verysati + sati + neither + dissati + verydissati
+    diary_text = "오늘의 일기\n " \
+                 "{}오늘은 날씨가 {}\n " \
+                 "그래서 {}에 {}랑 만났다.\n " \
+                 "{}랑 {}에서 만나서 {}을 했다.\n" \
+                 "오늘 하루는 {}\n" \
+                 "느낀점\n" \
+                 "{} ".format(day,weather,time,place,people, people, task, sati, felt)
 
     lbl_diary_2['text'] = ''
-    if text != "":
-        lbl_diary_2.insert(0, text)
+    if diary_text != "":
+        lbl_diary_2.insert(0, diary_text)
         update()
 
     f = open('diary_text.txt', 'w')
     f.write(diary_text)
 
-    return text
+    return diary_text
 
 def modify(text):
     print(text)
@@ -326,6 +357,7 @@ sati_list = []
 neither_list = []
 dissati_list = []
 verydissati_list = []
+felt_list = []
 
 
 # 날짜
@@ -457,13 +489,13 @@ lbl_satisfaction_display = Label(window, text="", bg="white")
 lbl_satisfaction_display.place(x=400, y=380)
 
 #느낀점
-lbl_takeaway = Label(window, text="느낀점", bg="white",width=5)
-lbl_takeaway.place(x=30, y=410)
+lbl_felt = Label(window, text="느낀점", bg="white",width=5)
+lbl_felt.place(x=30, y=410)
 
-takeaway_input = Entry(window, width=45)
-takeaway_input.place(x=80, y=410, height=130)
+felt_input = Entry(window, width=45)
+felt_input.place(x=80, y=410, height=130)
 
-btn_add = Button(window, text="추가", bg="white", width=5)
+btn_add = Button(window, text="추가", bg="white", width=5,command=felt_in)
 btn_add.place(x=353, y=410)
 
 # 일기
