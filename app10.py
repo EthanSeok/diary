@@ -288,25 +288,25 @@ def felt_in():
 
 def add():
     day = ''.join(day_list) + '' + "\n"
-    sunny = ''.join(sunny_list) + "\n"
-    rain = ''.join(rain_list) + "\n"
-    hazy = ''.join(hazy_list) + "\n"
-    snow = ''.join(snow_list) + "\n"
-    wind = ''.join(wind_list) + "\n"
-    thun = ''.join(thun_list) + "\n"
-    time = ''.join(time_list) + "\n"
-    place = ''.join(place_list) + "\n"
-    people = ''.join(people_list) + "\n"
-    task = ''.join(task_list) + "\n"
-    verysati = ''.join(verysati_list) + "\n"
-    sati = ''.join(sati_list) + "\n"
-    neither = ''.join(neither_list) + "\n"
-    dissati = ''.join(dissati_list) + "\n"
-    verydissati = ''.join(verydissati_list) + "\n"
-    felt = ''.join(felt_list) + "\n"
+    sunny = ''.join(sunny_list)
+    rain = ''.join(rain_list)
+    hazy = ''.join(hazy_list)
+    snow = ''.join(snow_list)
+    wind = ''.join(wind_list)
+    thun = ''.join(thun_list)
+    time = ''.join(time_list)
+    place = ''.join(place_list)
+    people = ''.join(people_list)
+    task = ''.join(task_list)
+    verysati = ''.join(verysati_list)
+    sati = ''.join(sati_list)
+    neither = ''.join(neither_list)
+    dissati = ''.join(dissati_list)
+    verydissati = ''.join(verydissati_list)
+    felt = ''.join(felt_list)
 
 
-    weather =  sunny + rain + hazy + snow + wind + thun
+    weather = sunny + rain + hazy + snow + wind + thun
     sati = verysati + sati + neither + dissati + verydissati
     diary_text = "오늘의 일기 {}\n " \
                  "오늘은 날씨가 {}\n " \
@@ -315,6 +315,7 @@ def add():
                  "오늘 하루는 {}\n" \
                  "느낀점\n" \
                  "{} ".format(day,weather,time,people, people, place, task, sati, felt)
+    print(diary_text)
 
     lbl_diary_2['text'] = ''
     if diary_text != "":
@@ -327,7 +328,7 @@ def add():
     return diary_text
 
 window = Tk()
-window.title("TO DO LIST")
+window.title("일기를 써주세요")
 window.configure(bg='white')
 window.geometry("1000x600+100+100")
 window.resizable(True, True)
