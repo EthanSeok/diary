@@ -2,7 +2,7 @@
 # Python을 활용하여 **Diary**를 작성해 보자.
 ---
 
-<img src = "https://user-images.githubusercontent.com/93086581/172560183-07fa6598-f3f5-4962-a026-a082d320a88d.png" width="100" height="50"
+<img src = "https://user-images.githubusercontent.com/93086581/172560183-07fa6598-f3f5-4962-a026-a082d320a88d.png" width="100" height="50"/>
 
 ---
 
