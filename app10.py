@@ -310,10 +310,12 @@ def add():
     sati = verysati + sati + neither + dissati + verydissati
     diary_text = "오늘의 일기 {}\n " \
                  "오늘은 날씨가 {}\n " \
-                 "그래서 {}에 {}랑 만났다.\n " \
-                 "{}랑 {}에서 만나서 {}을 했다.\n" \
+                 "{}에 {}명이랑 만났다.\n " \
+                 "{}명이랑 {}에서 만나서 {}을(를) 했다.\n" \
                  "오늘 하루는 {}\n" \
+                 "\n" \
                  "느낀점\n" \
+                 "\n" \
                  "{} ".format(day,weather,time,people, people, place, task, sati, felt)
     print(diary_text)
 
