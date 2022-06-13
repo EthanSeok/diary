@@ -51,11 +51,13 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <br>
 
 <p align="center">  
-<img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="200" height="100"/><br>  
-
+<img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="300" height="200"/><br>  
+<br>
+  
+  
 <br>
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/93086581/172658242-c931c8c3-a209-4bbf-b54b-9f742721846f.png" width="300" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/93086581/172658242-c931c8c3-a209-4bbf-b54b-9f742721846f.png" width="400" height="400"/><br>  
   
 <br>
 다음과 같이 일기가 자동으로 출력됩니다.
