@@ -58,9 +58,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/93086581/173334641-17e5a582-798d-4100-8583-968e67665292.png" width="500" height="300"/><br>
 <br>
-
 다음과 같이 항목이 삭제 된것을 확인할 수 있습니다.<br>
-  <br>
     
 <br>
 리스트 박스 안에 원하는 값이 모두 들어간 것을 확인했다면, 이후 '입력' 버튼을 클릭하면 일기가 자동으로 써서 출력됩니다.<br>
@@ -69,7 +67,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">  
 <img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="400" height="200"/><br>  
 <br>
-다음 안내창이 뜨면 일기를 불러오려면 '예' 다시 수정하려면 '아니'를 클릭합니다.
+다음 안내창이 뜨면 일기를 불러오려면 '예' 다시 수정하려면 '아니요'를 클릭합니다.
   
 <br>
 <p align="center">
