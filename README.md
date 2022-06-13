@@ -355,5 +355,5 @@ place()를 이용하여 위젯의 위치를 지정했습니다. command를 통�
 ---
 ## 참고 문헌
 Python tkinter 강좌 - https://076923.github.io/posts/Python-tkinter-1/ <br>
-to do list - https://pythonguides.com/python-tkinter-todo-list/
+to do list - https://pythonguides.com/python-tkinter-todo-list/ <br>
 default box - https://stackoverflow.com/questions/70406538/tkinter-entry-box-default-text
