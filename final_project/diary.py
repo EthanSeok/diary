@@ -39,15 +39,6 @@ def update():
     for times in time_list:
         listb.insert("end", times)
 
-    for places in place_list:
-        listb.insert("end", places)
-
-    for peoples in people_list:
-        listb.insert("end", peoples)
-
-    for tasks in task_list:
-        listb.insert("end", tasks)
-
     for sunny in sunny_list:
         listb.insert("end", sunny)
 
@@ -65,6 +56,15 @@ def update():
 
     for thun in thun_list:
         listb.insert("end", thun)
+
+    for places in place_list:
+        listb.insert("end", places)
+
+    for peoples in people_list:
+        listb.insert("end", peoples)
+
+    for tasks in task_list:
+        listb.insert("end", tasks)
 
     for verysati in verysati_list:
         listb.insert("end", verysati)
