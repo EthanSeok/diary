@@ -332,7 +332,7 @@ def add():
 window = Tk()
 window.title("일기를 써주세요")
 window.configure(bg='white')
-window.geometry("1000x600+100+100")
+window.geometry("1000x555")
 window.resizable(False, False)
 
 day_list = []
@@ -434,53 +434,53 @@ btn_task.place(x=240, y=150)
 lbl_6_display = Label(window, text="", bg="white")
 lbl_6_display.place(x=290, y=150)
 
-# 저장
-btn_update = Button(window, text="완료", width=5, command=add)
-btn_update.place(x=335, y=200, height=50)
-
-btn_del = Button(window, text="삭제", width=5, command=deleteone)
-btn_del.place(x=335, y=265, height=35)
-
-btn_diary = Button(window, text="clear", width=5, command=clearlistbox)
-btn_diary.place(x=335, y=315, height=35)
-
-listb = Listbox()
-listb.place(x=30, y=200, width=300, height=150)
-
 # 만족도
 lbl_satisfaction = Label(window, text="만족도", bg="white", width=5)
-lbl_satisfaction.place(x=30, y=380)
+lbl_satisfaction.place(x=30, y=180)
 
 btn_verysati = Button(master=window, text="매우만족", width=7, command=verysati_in)
-btn_verysati.place(x=80, y=380)
+btn_verysati.place(x=80, y=180)
 
 btn_sati = Button(master=window, text="만족", width=7, command=sati_in)
-btn_sati.place(x=145, y=380)
+btn_sati.place(x=145, y=180)
 
 btn_neither = Button(master=window, text="보통", width=7, command=neither_in)
-btn_neither.place(x=210, y=380)
+btn_neither.place(x=210, y=180)
 
 btn_dissati = Button(master=window, text="나쁨", width=7, command=dissati_in)
-btn_dissati.place(x=275, y=380)
+btn_dissati.place(x=275, y=180)
 
 btn_verydissati = Button(master=window, text="매우나쁨", width=7, command=verydissati_in)
-btn_verydissati.place(x=340, y=380)
+btn_verydissati.place(x=340, y=180)
 
 lbl_satisfaction_display = Label(window, text="", bg="white")
-lbl_satisfaction_display.place(x=400, y=380)
+lbl_satisfaction_display.place(x=400, y=180)
 
 #느낀점
 lbl_felt = Label(window, text="느낀점", bg="white", width=5)
-lbl_felt.place(x=30, y=410)
+lbl_felt.place(x=30, y=215)
 
 felt_input = Entry(window, width=45)
-felt_input.place(x=80, y=410, height=130)
+felt_input.place(x=80, y=215, height=130)
 
 btn_add = Button(window, text="추가", bg="white", width=5, command=felt_in)
-btn_add.place(x=353, y=410)
+btn_add.place(x=353, y=215)
 
 lbl_felt_display = Label(window, text="", bg="white")
-lbl_felt_display.place(x=80, y=550)
+lbl_felt_display.place(x=80, y=355)
+
+# 저장
+btn_update = Button(window, text="완료", width=5, command=add)
+btn_update.place(x=335, y=380, height=50)
+
+btn_del = Button(window, text="삭제", width=5, command=deleteone)
+btn_del.place(x=335, y=445, height=35)
+
+btn_diary = Button(window, text="clear", width=5, command=clearlistbox)
+btn_diary.place(x=335, y=495, height=35)
+
+listb = Listbox()
+listb.place(x=30, y=380, width=300, height=150)
 
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
