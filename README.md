@@ -24,7 +24,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <br>
   
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/93086581/172654928-09c3b030-9907-457e-a39e-36081f2f1538.png" width="500" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/102236107/173296630-8b8521f7-3aa4-4e9f-99a4-1376bb35aa03.png" width="500" height="300"/><br>
   
 <br>
 다음 사진과 같은 양식으로 텍스트 박스 안에 그날 한 일에 대한 간단한 정보를 입력합니다.<br>
