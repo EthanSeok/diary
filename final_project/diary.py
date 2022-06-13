@@ -133,11 +133,11 @@ def deleteone():
     update()
 
     if delt in verysati_list:
-        sati_list.remove(delt)
+        verysati_list.remove(delt)
     update()
 
     if delt in sati_list:
-        task_list.remove(delt)
+        sati_list.remove(delt)
     update()
 
     if delt in neither_list:
@@ -149,7 +149,7 @@ def deleteone():
     update()
 
     if delt in verydissati_list:
-        verysati_list.remove(delt)
+        verydissati_list.remove(delt)
     update()
 
     if delt in felt_list:
@@ -361,6 +361,9 @@ def add():
     f.write(diary_text)
 
     return
+
+def modify():
+    pass
 
 window = Tk()
 window.title("일기를 써주세요")
