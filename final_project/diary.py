@@ -359,6 +359,17 @@ def add():
                  "\n" \
                  "{} ".format(day,weather,time, place, task, sati, felt)
 
+    if people != (1, 100):
+        diary_text = "오늘의 일기 {}\n " \
+                     "오늘은 날씨가 {}\n " \
+                     "{}에 {}이랑 만났다.\n " \
+                     "{}명이랑 {}에서 만나서 {}을(를) 했다.\n" \
+                     "오늘 하루는 {}\n" \
+                     "\n" \
+                     "느낀점\n" \
+                     "\n" \
+                     "{} ".format(day, weather, time, people, people, place, task, sati, felt)
+
     message = messagebox.askquestion(
         '일기 쓰기', '리스트를 확정하여 일기를 불러오시겠습니까?')
     print(message)
