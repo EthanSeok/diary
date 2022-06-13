@@ -307,13 +307,13 @@ def verydissati_in():
     return verydissati
 
 def felt_in():
-    lbl_felt_display["text"] = ""
+    lbl_felt["text"] = ""
     felt = felt_input.get()
     if felt != "":
         felt_list.append(felt)
         update()
     else:
-        lbl_felt_display["text"] = "느낀점이 없어??"
+        lbl_felt_display["text"] = "느낀게 없어? 귀찮아도 생각해봐.."
     felt_input.delete(0, 'end')
 
 def add():
