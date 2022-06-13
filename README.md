@@ -58,6 +58,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/93086581/173334641-17e5a582-798d-4100-8583-968e67665292.png" width="500" height="300"/><br>
 <br>
+<p align="center">
 다음과 같이 항목이 삭제 된것을 확인할 수 있습니다.<br>
     
 <br>
