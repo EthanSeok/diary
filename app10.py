@@ -277,13 +277,13 @@ def verydissati_in():
     return verydissati
 
 def felt_in():
-    lbl_felt["text"] = ""
+    lbl_felt_display["text"] = ""
     felt = felt_input.get()
     if felt != "":
         felt_list.append(felt)
         update()
     else:
-        lbl_felt["text"] = "할 일이 없어? 게으르게 살거야?"
+        lbl_felt_display["text"] = "할 일이 없어? 게으르게 살거야?"
     felt_input.delete(0, 'end')
 
 def add():
@@ -316,7 +316,7 @@ def add():
                  "\n" \
                  "느낀점\n" \
                  "\n" \
-                 "{} ".format(day,weather,time,people, people, place, task, sati, felt)
+                 "{} ".format(day, weather, time, people, people, place, task, sati, felt)
     print(diary_text)
 
     lbl_diary_2['text'] = ''
@@ -325,7 +325,7 @@ def add():
         update()
 
     with open("diary.pickle", "wb") as f:
-        pickle.dump(diary_text,f)
+        pickle.dump(diary_text, f)
 
     return diary_text
 
@@ -333,7 +333,7 @@ window = Tk()
 window.title("일기를 써주세요")
 window.configure(bg='white')
 window.geometry("1000x600+100+100")
-window.resizable(True, True)
+window.resizable(False, False)
 
 day_list = []
 time_list = []
@@ -436,16 +436,16 @@ lbl_6_display.place(x=290, y=150)
 
 # 저장
 btn_update = Button(window, text="완료", width=5, command=add)
-btn_update.place(x=305, y=200, height=50)
+btn_update.place(x=335, y=200, height=50)
 
-btn_del = Button(window, text="삭제", width=5, command= deleteone)
-btn_del.place(x=305, y=265, height=35)
+btn_del = Button(window, text="삭제", width=5, command=deleteone)
+btn_del.place(x=335, y=265, height=35)
 
 btn_diary = Button(window, text="clear", width=5, command=clearlistbox)
-btn_diary.place(x=305, y=315, height=35)
+btn_diary.place(x=335, y=315, height=35)
 
 listb = Listbox()
-listb.place(x=0, y=200, width=300, height=150)
+listb.place(x=30, y=200, width=300, height=150)
 
 # 만족도
 lbl_satisfaction = Label(window, text="만족도", bg="white", width=5)
@@ -470,14 +470,17 @@ lbl_satisfaction_display = Label(window, text="", bg="white")
 lbl_satisfaction_display.place(x=400, y=380)
 
 #느낀점
-lbl_felt = Label(window, text="느낀점", bg="white",width=5)
+lbl_felt = Label(window, text="느낀점", bg="white", width=5)
 lbl_felt.place(x=30, y=410)
 
 felt_input = Entry(window, width=45)
 felt_input.place(x=80, y=410, height=130)
 
-btn_add = Button(window, text="추가", bg="white", width=5,command=felt_in)
+btn_add = Button(window, text="추가", bg="white", width=5, command=felt_in)
 btn_add.place(x=353, y=410)
+
+lbl_felt_display = Label(window, text="", bg="white")
+lbl_felt_display.place(x=80, y=550)
 
 # 일기
 lbl_diary = Label(window, text="일기", bg="white", width=5)
