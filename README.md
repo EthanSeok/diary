@@ -103,7 +103,7 @@ window.mainloop()
 <br>
 마지막 **window.mainloop()** 는 창을 임의로 종료할때 까지 실행되도록 합니다.<br>
 <br>
-
+<br>
 
 <h3> 프로그램 설계 </h3>
 
