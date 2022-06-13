@@ -48,7 +48,11 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
   
 <br>
 리스트 박스 안에 원하는 값이 모두 들어간 것을 확인했다면, 이후 '입력' 버튼을 클릭하면 일기가 자동으로 써서 출력됩니다.<br>
-  
+<br>
+
+<p align="center">  
+<img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="200" height="100"/><br>  
+
 <br>
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/93086581/172658242-c931c8c3-a209-4bbf-b54b-9f742721846f.png" width="300" height="300"/><br>
