@@ -45,7 +45,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">  
 <img src = "https://user-images.githubusercontent.com/93086581/173333711-f8a002ed-ee9f-433d-b0c7-7a42064387ca.png" width="500" height="300"/><br>
 <br>
-  
+<p align="center">  
 다음과 같이 모든 항목을 채웠으나 마음에 들지 않아 수정하고 싶을 경우에는  
 
 <br>  
@@ -58,7 +58,6 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/93086581/173334641-17e5a582-798d-4100-8583-968e67665292.png" width="500" height="300"/><br>
 <br>
-<p align="center">
 다음과 같이 항목이 삭제 된것을 확인할 수 있습니다.<br>
     
 <br>
