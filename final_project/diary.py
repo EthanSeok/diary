@@ -362,9 +362,6 @@ def add():
 
     return
 
-def modify():
-    pass
-
 window = Tk()
 window.title("일기를 써주세요")
 window.configure(bg='white')
