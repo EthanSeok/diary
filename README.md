@@ -24,14 +24,14 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <br>
   
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/102236107/173296630-8b8521f7-3aa4-4e9f-99a4-1376bb35aa03.png" width="500" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/102236107/173298980-2a2ed9e6-98b4-4948-bf26-4fa92191dfa5.png" width="500" height="300"/><br>
   
 <br>
 다음 사진과 같은 양식으로 텍스트 박스 안에 그날 한 일에 대한 간단한 정보를 입력합니다.<br>
 <br>
   
 <p align="center">  
-<img src = "https://user-images.githubusercontent.com/93086581/172655590-bb819d1a-7c99-40e6-8f8b-c9a50311a7b9.png" width="500" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/102236107/173299395-818e0dab-0259-4ec9-aeb0-60bed2728a97.png" width="500" height="300"/><br>
   
 <br>
 텍스트를 입력한 후 텍스트 박스 옆에 있는 '추가' 버튼을 클릭하고 확인 리스트 박스에 입력 값이 잘 들어갔는지 확인합니다.
@@ -44,7 +44,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 만족도도 날씨와 마찬가지로 모든 선택지가 버튼으로 구현되어 있기 때문에 당일 한 일에 대한 만족도를 스스로 평가하여 입력하면 됩니다.<br>
   
 <p align="center">  
-<img src = "https://user-images.githubusercontent.com/93086581/172657485-3119ea25-ce4c-47c9-8a4e-275c13e72b15.png" width="500" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/102236107/173299563-bbc91a55-1049-4b8e-a157-e6df9ed2e1fa.png" width="500" height="300"/><br>
   
 <br>
 리스트 박스 안에 원하는 값이 모두 들어간 것을 확인했다면, 이후 '입력' 버튼을 클릭하면 일기가 자동으로 써서 출력됩니다.<br>
