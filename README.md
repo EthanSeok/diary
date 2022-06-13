@@ -315,8 +315,27 @@ def add():
 <br>
 
 ```
+def clear_default(event):
+    event.widget.delete(0, 'end')
+    event.widget.unbind('<FocusIn>')
+```
+<br>
+다음 코드는 입력하는 텍스트 박스 내에 클릭시 사라지는 디폴트 텍스트를 삽입합니다.
+<br>
+<br>
+
+<p align="center"> 
+<img src = "https://user-images.githubusercontent.com/93086581/173374590-19c75220-337b-4ab1-855a-d4c99e5bbc68.png" width="400" height="100"/><br>
+<br>
+다음과 같이 디폴트 텍스트가 생성되고 클릭시 사라집니다.
+<br>
+<br>
+
+```
 lbl_1 = Label(window, text='날짜', bg="white")
 entry_1_text = Entry(window, width=20)
+entry_1_text.insert(0, 'ex) 2022.06.14')
+entry_1_text.bind('<FocusIn>', clear_default)
 lbl_1.place(x=30, y=0)
 entry_1_text.place(x=70, y=0)
 btn_day = Button(window, text='추가', bg="white", width=5, command=day_in)
@@ -337,3 +356,4 @@ place()를 이용하여 위젯의 위치를 지정했습니다. command를 통�
 ## 참고 문헌
 Python tkinter 강좌 - https://076923.github.io/posts/Python-tkinter-1/ <br>
 to do list - https://pythonguides.com/python-tkinter-todo-list/
+default box - https://stackoverflow.com/questions/70406538/tkinter-entry-box-default-text
