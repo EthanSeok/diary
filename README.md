@@ -44,7 +44,19 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 만족도도 날씨와 마찬가지로 모든 선택지가 버튼으로 구현되어 있기 때문에 당일 한 일에 대한 만족도를 스스로 평가하여 입력하면 됩니다.<br>
   
 <p align="center">  
-<img src = "https://user-images.githubusercontent.com/102236107/173299563-bbc91a55-1049-4b8e-a157-e6df9ed2e1fa.png" width="500" height="300"/><br>
+<img src = "https://user-images.githubusercontent.com/93086581/173333711-f8a002ed-ee9f-433d-b0c7-7a42064387ca.png" width="500" height="300"/><br>
+<br>
+  
+다음과 같이 모든 항목을 채웠으나 마응에 들지 않아 수정하고 싶을 경우에는  
+
+<br>  
+<p align="center">  
+<img src = "https://user-images.githubusercontent.com/102236107/173299563-bbc91a55-1049-4b8e-a157-e6df9ed2e1fa.png" width="500" height="300"/><br>  
+    
+  
+  
+  
+  
   
 <br>
 리스트 박스 안에 원하는 값이 모두 들어간 것을 확인했다면, 이후 '입력' 버튼을 클릭하면 일기가 자동으로 써서 출력됩니다.<br>
