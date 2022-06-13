@@ -268,7 +268,7 @@ def task_in():
 
 def verysati_in():
     lbl_satisfaction_display['text'] = ''
-    verysati = '매우 만족스러웠다..'
+    verysati = '매우 만족스러웠다.'
     if verysati_list != "":
         verysati_list.append(verysati)
         update()
@@ -276,7 +276,7 @@ def verysati_in():
 
 def sati_in():
     lbl_satisfaction_display['text'] = ''
-    sati = '만족스러웠다..'
+    sati = '만족스러웠다.'
     if sati_list != "":
         sati_list.append(sati)
         update()
@@ -347,6 +347,17 @@ def add():
                  "느낀점\n" \
                  "\n" \
                  "{} ".format(day,weather,time,people, people, place, task, sati, felt)
+
+    if people == '0':
+        diary_text = "오늘의 일기 {}\n " \
+                 "오늘은 날씨가 {}\n " \
+                 "{}에 나 혼자 있었다.\n " \
+                 "{}에서 나 혼자 {}을(를) 했다.\n" \
+                 "오늘 하루는 {}\n" \
+                 "\n" \
+                 "느낀점\n" \
+                 "\n" \
+                 "{} ".format(day,weather,time, place, task, sati, felt)
 
     message = messagebox.askquestion(
         '일기 쓰기', '리스트를 확정하여 일기를 불러오시겠습니까?')
