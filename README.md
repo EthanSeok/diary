@@ -53,7 +53,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <p align="center">  
 <img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="400" height="200"/><br>  
 <br>
-다음 안내창이 뜨면 일기를 불러오려면 '예' 다시 수정하려면 '아니오'를 클릭합니다.
+다음 안내창이 뜨면 일기를 불러오려면 '예' 다시 수정하려면 '아니'를 클릭합니다.
   
 <br>
 <p align="center">
