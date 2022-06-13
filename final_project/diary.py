@@ -373,6 +373,10 @@ def add():
 
     return
 
+def clear_default(event):
+    event.widget.delete(0, 'end')
+    event.widget.unbind('<FocusIn>')
+
 window = Tk()
 window.title("일기를 써주세요")
 window.configure(bg='white')
@@ -401,6 +405,8 @@ felt_list = []
 # 날짜
 lbl_1 = Label(window, text='날짜', bg="white")
 entry_1_text = Entry(window, width=20)
+entry_1_text.insert(0, 'ex) 2022.06.14')
+entry_1_text.bind('<FocusIn>', clear_default)
 lbl_1.place(x=30, y=0)
 entry_1_text.place(x=70, y=0)
 btn_day = Button(window, text='추가', bg="white", width=5, command=day_in)
@@ -411,6 +417,8 @@ lbl_1_display.place(x=290, y=0)
 # 시간
 lbl_3 = Label(window, text='시간', bg="white")
 entry_3_text = Entry(window, width=20)
+entry_3_text.insert(0, 'ex) 아침(오전) 9시')
+entry_3_text.bind('<FocusIn>', clear_default)
 lbl_3.place(x=30, y=30)
 entry_3_text.place(x=70, y=30)
 btn_time = Button(window, text='추가', bg="white", width=5, command=time_in)
@@ -461,6 +469,8 @@ lbl_4_display.place(x=290, y=90)
 # 인원
 lbl_5 = Label(window, text="인원", bg="white")
 entry_5_text = Entry(window, width=20)
+entry_5_text.insert(0, 'ex) 혼자일 경우 0')
+entry_5_text.bind('<FocusIn>', clear_default)
 lbl_5.place(x=30, y=120)
 entry_5_text.place(x=70, y=120)
 btn_people = Button(window, text='추가', bg="white", width=5, command=people_in)
