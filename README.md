@@ -73,7 +73,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
   
 <br>
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/93086581/172658242-c931c8c3-a209-4bbf-b54b-9f742721846f.png" width="400" height="400"/><br> 
+<img src = "https://user-images.githubusercontent.com/93086581/172658242-c931c8c3-a209-4bbf-b54b-9f742721846f.png" width="400" height="400"/><br>
 다음과 같이 일기가 자동으로 출력됩니다!
 
 ---
@@ -102,6 +102,7 @@ window.mainloop()
 기본적인 window 틀을 만들어 줍니다. 순서대로 배경색, 사이즈, 창사이즈 조절 가능 여부를 의미합니다.<br>
 <br>
 마지막 **window.mainloop()** 는 창을 임의로 종료할때 까지 실행되도록 합니다.<br>
+<br>
 
 <h3> 프로그램 설계 </h3>
 ---
