@@ -1,8 +1,35 @@
 from tkinter import *
-import pickle
+from tkinter import messagebox
 
 def clearlistbox():
     listb.delete(0, "end")
+
+def deleteall():
+    message = messagebox.askquestion(
+        '삭제 경고', '정말로 리스트를 비우겠습니까?')
+    print(message)
+    if message.upper() == "YES":
+        global day_list, time_list, place_list, people_list, task_list, sunny_list, rain_list, hazy_list, snow_list, wind_list, thun_list, verysati_list, sati_list, neither_list, dissati_list, verydissati_list,felt_list
+        day_list= []
+        time_list = []
+        place_list = []
+        people_list = []
+        task_list = []
+        sunny_list = []
+        rain_list = []
+        hazy_list = []
+        snow_list = []
+        wind_list = []
+        thun_list = []
+        verysati_list = []
+        sati_list = []
+        neither_list = []
+        dissati_list = []
+        verydissati_list = []
+        felt_list = []
+        update()
+    else:
+        pass
 
 def update():
     clearlistbox()
@@ -56,6 +83,8 @@ def update():
 
     for felt in felt_list:
         listb.insert("end", felt)
+
+    return
 
 def deleteone():
     delt = listb.get("active")
@@ -127,6 +156,7 @@ def deleteone():
         felt_list.remove(delt)
     update()
 
+    return
 
 def day_in():
     lbl_1_display["text"] = ""
@@ -277,13 +307,13 @@ def verydissati_in():
     return verydissati
 
 def felt_in():
-    lbl_felt_display["text"] = ""
+    lbl_felt["text"] = ""
     felt = felt_input.get()
     if felt != "":
         felt_list.append(felt)
         update()
     else:
-        lbl_felt_display["text"] = "할 일이 없어? 게으르게 살거야?"
+        lbl_felt["text"] = "할 일이 없어? 게으르게 살거야?"
     felt_input.delete(0, 'end')
 
 def add():
@@ -316,36 +346,39 @@ def add():
                  "\n" \
                  "느낀점\n" \
                  "\n" \
-                 "{} ".format(day, weather, time, people, people, place, task, sati, felt)
-    print(diary_text)
+                 "{} ".format(day,weather,time,people, people, place, task, sati, felt)
 
-    lbl_diary_2['text'] = ''
-    if diary_text != "":
-        lbl_diary_2['text'] = diary_text
-        update()
+    message = messagebox.askquestion(
+        '일기 쓰기', '리스트를 확정하여 일기를 불러오시겠습니까?')
+    print(message)
+    if message.upper() == "YES":
+        lbl_diary_2['text'] = ''
+        if diary_text != "":
+            lbl_diary_2['text'] = diary_text
+            update()
 
-    with open("diary.pickle", "wb") as f:
-        pickle.dump(diary_text, f)
+    f = open('diary_text.txt', 'w')
+    f.write(diary_text)
 
-    return diary_text
+    return
 
 window = Tk()
 window.title("일기를 써주세요")
 window.configure(bg='white')
 window.geometry("1000x600+100+100")
-window.resizable(False, False)
+window.resizable(True, True)
 
 day_list = []
-time_list = []
-place_list = []
-people_list = []
-task_list = []
 sunny_list = []
 rain_list = []
 hazy_list = []
 snow_list = []
 wind_list = []
 thun_list = []
+time_list = []
+place_list = []
+people_list = []
+task_list = []
 verysati_list = []
 sati_list = []
 neither_list = []
@@ -476,7 +509,7 @@ btn_update.place(x=335, y=380, height=50)
 btn_del = Button(window, text="삭제", width=5, command=deleteone)
 btn_del.place(x=335, y=445, height=35)
 
-btn_diary = Button(window, text="clear", width=5, command=clearlistbox)
+btn_diary = Button(window, text="clear", width=5, command=deleteall)
 btn_diary.place(x=335, y=495, height=35)
 
 listb = Listbox()
