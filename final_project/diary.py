@@ -359,7 +359,7 @@ def add():
                  "\n" \
                  "{} ".format(day,weather,time, place, task, sati, felt)
 
-    if people != (1, 100):
+    if people != (1, 100000):
         diary_text = "오늘의 일기 {}\n " \
                      "오늘은 날씨가 {}\n " \
                      "{}에 {}이랑 만났다.\n " \
