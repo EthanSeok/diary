@@ -51,7 +51,7 @@ tkinter 모듈을 이용하여 gui로 구연했기 때문에 평소에 보던 �
 <br>
 
 <p align="center">  
-<img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="300" height="200"/><br>  
+<img src = "https://user-images.githubusercontent.com/93086581/173331961-40cee848-6c5d-4074-932c-a9bbb2a8fec8.png" width="400" height="200"/><br>  
 <br>
   
   
