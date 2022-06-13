@@ -112,6 +112,7 @@ window.mainloop()
 이미 짜여진 일기 스크립트에 적용되어 자동으로 일기가 작성되는 방법을 베이스로 합니다.<br>
 <br>
 이를 위해서는 각각 입력 받은 요소를 각각의 리스트에 집어 넣어 필요할때 꺼낼 수 있도록 설계했습니다.
+<br>
 
 ```
 day_list = []
@@ -132,8 +133,10 @@ dissati_list = []
 verydissati_list = []
 felt_list = []
 ```
+<br>
 다음과 같이 각각을 리스트에 저장합니다. 날씨와 만족도의 경우 버튼 클릭으로 구현하고 싶었습니다.<br>
 고민 끝에 각각의 요소를 모두 리스트로 만들어 리스트 안에 텍스트가 들어가도록 설계했습니다.<br>
+<br>
 
 ```
 def sunny_in():
@@ -144,8 +147,10 @@ def sunny_in():
         update()
     return sunny
 ```
+<br>
 다음 날씨 예시 코드와 같이 '맑았다'를 sunny_list 리스트 안에 고정으로 넣어 버튼을 클릭시'맑았다'가 출력되도록<br>
 설계했습니다.<br>
+<br>
 <br>
 
 ```
@@ -159,18 +164,22 @@ def day_in():
         lbl_1_display["text"] = "날짜를 빼먹으면 일기를 못쓰지?"
     entry_1_text.delete(0, 'end')
 ```
+<br>
 다음 날짜 예시 코드는 사용자가 날씨 예시 코드와는 다르게 정해진 텍스트가 아닌 사용자가 입력한 텍스트가 <br>
 리스트 안에 들어가도록 설계했습니다. 만약에 사용자가 아무것도 입력을 하지 않고 '추가'를 클릭했을 시<br>
 "날짜를 빼먹으면 일기를 못쓰지?"와 같은 반응이 나오도록 설계했습니다.<br>
+<br>
 
 <p align="center">  
 <img src = "https://user-images.githubusercontent.com/93086581/173354480-d9151ca4-13f7-472c-9eae-c3b10b3dd9ef.png" width="500" height="300"/><br>
+<br>
 <br>
 
 ```
 listb = Listbox()
 listb.place(x=30, y=380, width=300, height=150)
 ```
+<br>
 사용자가 어떠한 값을 입력했는지 확인하기 위해서 리스트 박스를 만들어 입력한 값을 확인하고 수정할 수 있도록 설계했습니다.<br>
 
 <p align="center">  
@@ -183,7 +192,10 @@ listb.place(x=30, y=380, width=300, height=150)
 def clearlistbox():
     listb.delete(0, "end")
 ```
+<br>
 다음 코드는 리스트 박스 안에 입력된 값을 지우는 코드입니다.
+<br>
+<br>
 
 ```
 def update():
@@ -191,9 +203,11 @@ def update():
     for date in day_list:
         listb.insert("end", date)
 ```
+<br>
 다음 날짜 예시 코드는 리스트 박스 안에 입력 받은 값을 넣어주는 코드입니다. 위에서 만든 clearlistbox()를<br>
 이용하여 선행 입력 값을 삭제하여 같은 값이 중복되어 들어가는 것을 방지합니다. for 반복문을 사용하여 <br>
 날짜 뿐만 아니라 다른 값들 또한 입력 받을 수 있도록 설계했습니다.
+<br>
 <br>
 
 ```
@@ -203,15 +217,20 @@ def deleteone():
         day_list.remove(delt)
     update()
 ```
+<br>
 다음 날짜 예시 코드는 리스트 박스 안에 입력 받은 값을 제거하는 코드입니다. if 문을 사용하여 날짜 리스트<br>
 안에 들어 있는 입력 받은 값을 제거하고, update()을 다시 실행하여 리스트 박스 안에 들어간 값을 제거합니다.
+<br>
 <br>
 
 ```
 from tkinter import messagebox
 ```
+<br>
 messagebox 모듈을 이용하여 새로운 윈도우 창이 실행 되어 메세지를 전달 할 수 있도록 설계했습니다.
 <br>
+<br>
+
 ```
 message = messagebox.askquestion(
         '삭제 경고', '정말로 리스트를 비우겠습니까?')
@@ -239,9 +258,11 @@ message = messagebox.askquestion(
     else:
         pass
 ```
+<br>
 다음 코드는 리스트 박스 안에 입력 받은 값을 모두 지우는 코드입니다. messagebox 모듈을 이용하여<br>
 메세지 창을 띄우고, 사용자가 '예'를 클릭하면 모두 삭제 되도록 설계했습니다. global을 통해 전역 변수인 <br>
 리스트 들을 불러와 공백으로 만들고, update()를 실행하여 리스트 박스 내에 입력 받은 값들을 제거합니다.
+<br>
 <br>
 
 ```
@@ -285,10 +306,13 @@ def add():
             lbl_diary_2['text'] = diary_text
             update()
 ```
+<br>
 다음 코드는 사용자로 부토 입력 받아 리스트안에 들어간 정보를 기반으로 일기를 쓰는 코드입니다.<br>
 ''.join()을 이용하여 리스트 내의 텍스트를 추출하여 미리 작성한 일기 스크립트 내에 지정한 위치에 <br>
 대입합니다. 이 또한 마찬가지로 messagebox룰 이용하여 최종적으로 일기를 작성할 것인지 물어봅니다.
 <br>
+<br>
+
 ```
 lbl_1 = Label(window, text='날짜', bg="white")
 entry_1_text = Entry(window, width=20)
@@ -299,6 +323,7 @@ btn_day.place(x=240, y=0)
 lbl_1_display = Label(window, text="", bg="white")
 lbl_1_display.place(x=290, y=0)
 ```
+<br>
 마지막으로 다음 날짜 예제 코드는 tkinter의 GUI 위젯을 세팅하는 코드입니다.<br>
 각각 Label(라벨), Entry(입력 칸), Button(버튼) 위젯의 크기를 조절하고<br>
 place()를 이용하여 위젯의 위치를 지정했습니다. command를 통해 위에서 본 day_in 코드를 <br>
