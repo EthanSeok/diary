@@ -379,7 +379,7 @@ def add():
             lbl_diary_2['text'] = diary_text
             update()
 
-    f = open('diary_text.txt', 'w')
+    f = open('diary_text.txt', 'a')
     f.write(diary_text)
 
     return
