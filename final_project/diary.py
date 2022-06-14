@@ -346,7 +346,9 @@ def add():
                  "\n" \
                  "느낀점\n" \
                  "\n" \
-                 "{} ".format(day,weather,time,people, people, place, task, sati, felt)
+                 "{}\n" \
+                 "---------------------------------------------------------------\n" \
+                 " ".format(day,weather,time,people, people, place, task, sati, felt)
 
     if people == '0':
         diary_text = "오늘의 일기 {}\n " \
@@ -357,7 +359,9 @@ def add():
                  "\n" \
                  "느낀점\n" \
                  "\n" \
-                 "{} ".format(day,weather,time, place, task, sati, felt)
+                 "{} \n" \
+                 "---------------------------------------------------------------\n" \
+                "".format(day,weather,time, place, task, sati, felt)
 
     elif people != (1, 100000):
         diary_text = "오늘의 일기 {}\n " \
@@ -368,7 +372,9 @@ def add():
                      "\n" \
                      "느낀점\n" \
                      "\n" \
-                     "{} ".format(day, weather, time, people, people, place, task, sati, felt)
+                     "{} \n" \
+                     "---------------------------------------------------------------\n" \
+                     "".format(day, weather, time, people, people, place, task, sati, felt)
 
     message = messagebox.askquestion(
         '일기 쓰기', '리스트를 확정하여 일기를 불러오시겠습니까?')
